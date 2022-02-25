@@ -1,0 +1,33 @@
+
+<ion-content class=" add-inv ion-padding">
+ 
+  
+    <ion-item>
+      <ion-label position="floating">Titre</ion-label>
+      <ion-input [(ngModel)]="titre" type="text" ></ion-input>
+    </ion-item>
+  
+
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-datetime [(ngModel)]="date" displayFormat="MM/DD/YYYY" min="2000-03-14" max="2030-12-09" value="2002-09-23T15:03:46.789"> <ion-icon slot="end" name="calendar"></ion-icon></ion-datetime>
+      
+    </ion-item>
+   
+
+  <ion-item>
+      <ion-label position="floating" >Type</ion-label>
+      <ion-select [(ngModel)]="type" value="plannifié">
+        <ion-select-option value="plannifié">Plannifié</ion-select-option>
+        <ion-select-option value="termine">Terminé</ion-select-option>
+        <ion-select-option value="attente">en attente</ion-select-option>
+      </ion-select>
+    </ion-item>
+   
+
+  
+    <ion-button  class="btn-valid" (click)="createInv()" >Valider</ion-button>
+ 
+  
+
+</ion-content><
